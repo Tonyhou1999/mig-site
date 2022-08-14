@@ -3,8 +3,10 @@ import Link from "next/link";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
+import {NavBar} from "../components/Nav";
 
 export default function Home() {
+
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     await loadFull(engine);
@@ -16,8 +18,8 @@ export default function Home() {
 
   return (
     <div className="container">
-      <main>
-        <div className="column">
+      <div><NavBar /></div>
+      <div>
           <Particles
             id="tsparticles"
             init={particlesInit}
@@ -25,7 +27,9 @@ export default function Home() {
             options={{
               background: {
                 color: {
-                  value: "#200202",
+                  // value: "#200202",
+                  // value: "#7a2536",
+                  value: "#611e2b"
                 },
               },
               fpsLimit: 120,
@@ -48,6 +52,13 @@ export default function Home() {
                   repulse: {
                     distance: 200,
                     duration: 0.4,
+                  },
+                  bubble: {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 0.5,
+                    "opacity": 8,
+                    "speed": 3
                   },
                 },
               },
@@ -72,7 +83,7 @@ export default function Home() {
                     default: "out",
                   },
                   random: false,
-                  speed: 6,
+                  speed: 8,
                   straight: false,
                 },
                 number: {
@@ -96,7 +107,6 @@ export default function Home() {
             }}
           />
         </div>
-      </main>
 
       <style jsx>{`
         .container {
@@ -115,6 +125,10 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        hackTop {
+          anchor
         }
 
         footer {
