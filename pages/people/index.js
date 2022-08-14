@@ -3,5 +3,5 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // @TODO: impl.
 export default function People() {
-  return <NavBar />
+  return <NavBar props={{}} props2={[]}/>
 };
