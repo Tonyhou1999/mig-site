@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import styles from './NavBar.module.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-// "Right" NavBar react component
+// @TODO: This is ugly, do this the right way, hacked for a second to make sure bootstrap was working
 const NavBar = () => {
   return (
     <div>

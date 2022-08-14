@@ -104,10 +104,10 @@ export default function Home() {
                 },
               },
               detectRetina: true,
-            }}
+            }} // TODO: Remove inline styling, cleanup, make modular
           />
         </div>
-
+      
       <style jsx>{`
         .container {
           min-height: 100vh;
