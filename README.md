@@ -58,7 +58,7 @@ Flow: Just make use of react and ES6 features to make things as modular and scal
 ## Conventions
 Code: Try to stick to google javascript conventions and docstrings, no worries if we don't completely, just a general rule of thumb. <br/> <br/>
 
-Features and PRs: Nothing crazy, to keep things simple lets do feature branches off `develop` like `john/<Jira ticket num eg. MS-1>/cool-new-feature`. Put up pull request back into `develop` so that we have another person glance at things and can be most efficient. <br/><br/> For small things like tiny bugfixes and formatting just commit on `develop`, for large features that require complex integrations try to write unit tests where it makes sense, nothing crazy here. <br /> <br />
+Features and PRs: Nothing crazy, to keep things simple lets do feature branches off `develop` like <br/> `john/<Jira ticket num eg. MS-1>/cool-new-feature`. Put up pull request back into `develop` so that we have another person glance at things and can be most efficient. Note: Jira is synced up with github, you should do all your pull requests and branch creation in Jira so that the branches and PRs are linked to the ticket and we keep track of what stuff we have to do still. This way, the organization is really easy, Jira will automatically transition issues once you merge the PR in. <br/><br/> For small things like tiny bugfixes and formatting just commit on `develop`, for large features that require complex integrations try to write unit tests where it makes sense, nothing crazy here. <br /> <br />
 
 Tasklist and keeping on track: Use this
 
