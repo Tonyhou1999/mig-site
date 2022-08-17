@@ -1,7 +1,14 @@
-.container {
-  margin: 50px;
+.navLinkText a {
+  color:black;
 }
 
-.navText {
-  color: black;
+.navLinkText a:hover {
+  color:darkblue;
 }
+
+
+
+
+
+
+

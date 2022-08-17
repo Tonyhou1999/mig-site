@@ -3,38 +3,61 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from './NavBar.module.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 import "./NavBar.module.css";
 import { memo } from "react";
 
-// @TODO: This is ugly, do this the right way, hacked for a second to make sure bootstrap was working
-const NavBar = memo(({ navBarArray }) => {
+const NavBar = memo(
+  ({
+    navBarArray = [{ text: "people", text: "people2" }],
+    navBarStyle,
+    endAlign,
+  }) => {
+  navBarStyle = navBarStyle || "defaultNavBarStyle";
+
 
   return (
-    <div>
-      <Navbar collapseOnSelect expand="lg" bg="white" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home"><p>React-Bootstrap</p></Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <div> </div>
-            </Nav>
+    <body style={{"height": "20000px"}}>
+      <Navbar bg="light" expand="lg" className="navbar fixed-top navbar-expand-sm navbar-light">
+        <div className="container">
+        <Navbar.Brand href="#">
+          MIG
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="n-navbar-nav" />
+        <Navbar.Collapse id="n-navbar-nav">
+          <Nav className="ms-auto">
+            <NavLink text={"About"} />
+            <NavLink text={"Contact"} />
 
-            <Nav>
-              {/* <Nav.Link href="/People"><navText>About</navText></Nav.Link>
-              <Nav.Link href="/People"><navText>Resources</navText></Nav.Link>
-              <Nav.Link href="/People"><navText>Contact</navText></Nav.Link>
-              <Nav.Link href="/People"><navText>Blog</navText></Nav.Link> */}
-              {/* <Nav.Link href="/People"><div className={styles.navText}>Apply</div></Nav.Link> */}
-              <NavLink text={5} linkDest={"/"}/>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+          </Nav>
+        </Navbar.Collapse>
+        </div>
+    </Navbar>
+    </body>
 
-    </div>
-  );
+);
+
+
 });
+
+const NavElements = ({ navBarArray }) => {
+  return navBarArray.map((element) => {
+    const {
+      disabled = false,
+      linkDest = null,
+      isDropDown = false,
+      dropDownMembers = null,
+      text,
+    } = element;
+
+    return isDropDown && dropDownMembers ? 
+      null :
+        <NavLink text={text} 
+          disabled={disabled}
+          linkDest={linkDest}
+        />;
+  });
+};
 
 /**
  * 
@@ -45,7 +68,7 @@ const NavBar = memo(({ navBarArray }) => {
  */
 const NavLink = ({ text, linkDest, disabled }) => {
   // Check for invalid text string 
-  if (!text || typeof text != "string" || !String.length(text)) {
+  if (!text || typeof text != "string" || text.length == 0) {
     console.error("[NavLink] Error: text must be a valid string");
     return null;
   }
@@ -56,9 +79,9 @@ const NavLink = ({ text, linkDest, disabled }) => {
     linkDest = linkDest || "";
   }
   return (
-    <Nav.Link href={linkDest}>
-      <div className={styles.navText}>{text}</div>
-    </Nav.Link> 
+    <Nav.Item>
+      <Nav.Link ahref={linkDest} className={styles.navlinkText}> {text} </Nav.Link>
+    </Nav.Item>
   );
 };
 
@@ -66,8 +89,5 @@ const NavDropDown = () => {
 
 };
 
-const NavLogo = () => {
-
-};
 
 export default NavBar;
