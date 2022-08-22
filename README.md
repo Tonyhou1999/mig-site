@@ -8,7 +8,8 @@ To create an optimized production build with fast refresh run:
 
 To view a locally hosted preview, go to http://localhost:3000 <br/> <br/>
 
-Generally, you should only need to run `npm run dev` once, as you save the files you are working on, the frontend should update itself automatically (you don't even need to reload the page in your browser). You can read more about the details of fast refresh if interested here: https://nextjs.org/docs/basic-features/fast-refresh
+For some things, you won't need to re-build or refresh at all to tune/test. For others, you need to run `npm run build` before `npm run start` 
+You can read more about the details of fast refresh if interested here: https://nextjs.org/docs/basic-features/fast-refresh
 
 
 
