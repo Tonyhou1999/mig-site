@@ -1,12 +1,11 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
-import {NavBar} from "../components/Nav";
+import { NavBar } from "../components/Nav";
 import miglogo from "../public/images/MIG_Logo_No_BG.png";
 
 export default function Home() {
-
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     await loadFull(engine);
@@ -16,9 +15,10 @@ export default function Home() {
     await console.log(container);
   }, []);
 
+  // Navbar links and dropdowns 
   const navArr = [
     { text: "About", linkDest: "/about" },
-    { text: "Projects", linkDest: "/projects", disabled: true },
+    { text: "Projects", linkDest: "/projects" },
     { text: "Resources", linkDest: "/resources" },
     { text: "Apply", linkDest: "/apply" },
     { text: "Contact", linkDest: "/contact", disabled: true },
@@ -27,7 +27,6 @@ export default function Home() {
   return (
     <div className="container">
       <NavBar navBarArray={navArr} />
-      
       <div className="wrapper">
         <Particles
           id="tsparticles"
@@ -36,13 +35,7 @@ export default function Home() {
           options={{
             background: {
               color: {
-                // value: "#200202",
-                // value: "#7a2536",
-                // value: "#611e2b"
-                // value: "#b38f59"
-                value: "#4a0a1f"
-                // TODO: decide on color
-                // value: "#000000"
+                value: "#4a0a1f",
               },
             },
             fpsLimit: 120,
@@ -67,11 +60,11 @@ export default function Home() {
                   duration: 0.4,
                 },
                 bubble: {
-                  "distance": 400,
-                  "size": 40,
-                  "duration": 0.5,
-                  "opacity": 8,
-                  "speed": 3
+                  distance: 400,
+                  size: 40,
+                  duration: 0.5,
+                  opacity: 8,
+                  speed: 3,
                 },
               },
             },
@@ -83,7 +76,7 @@ export default function Home() {
                 color: "#ffffff",
                 distance: 90,
                 enable: true,
-                opacity:1.0,
+                opacity: 1.0,
                 width: 2,
               },
               collisions: {
@@ -118,31 +111,18 @@ export default function Home() {
             },
             detectRetina: true,
           }} // TODO: Remove inline styling, cleanup, make modular
-        /> 
-      
-        {/* <h1>Machine Intelligence Group of Boston College</h1>
-        <Image
-          alt="Next.js logo"
-          src={miglogo}
-          layout="intrinsic"
-        /> */}
+        />
         <div className="centered">
           <div>
-            <Image
-              alt="Next.js logo"
-              src={miglogo}
-              layout="intrinsic"
-            />
+            <Image alt="Next.js logo" src={miglogo} layout="intrinsic" />
           </div>
           <div>
             <h1>Machine Intelligence Group of Boston College</h1>
           </div>
         </div>
+      </div>
 
-    </div>
-      
       <style jsx>{`
-
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -160,7 +140,6 @@ export default function Home() {
           max-width: 800px;
           margin-top: 3rem;
         }
-
 
         @media (max-width: 600px) {
           .grid {
@@ -192,7 +171,6 @@ export default function Home() {
           transform: translate(-50%, -50%);
           row-gap: 20px;
         }
-        
       `}</style>
 
       <style jsx global>{`
