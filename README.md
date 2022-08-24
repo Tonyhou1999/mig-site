@@ -3,15 +3,14 @@ Since the project is build with node, all usual node commands work. <br/> You ca
 To install the modules needed to run everything, just run `npm install` <br/>
 
 ## Creating development Build
-To create an optimized production build with fast refresh run: 
-`npm run dev` <br /> from within ``mig-site`` <br/> <br/>
+To create an optimized production build do `npm run build` followed by `npm run start`.
 
-To view a locally hosted preview, go to http://localhost:3000 <br/> <br/>
-
-You can also do `npm run build` followed by `npm run start` as well.
+To create a debug build with fast refresh run: <br/>
+`npm run dev`  from within ``mig-site`` <br/> 
+Note: this is not how the website will look but is a quick tool to find bugs and change certain things.
 You can read more about the details of fast refresh if interested here: https://nextjs.org/docs/basic-features/fast-refresh
 
-
+To view a locally hosted preview, go to http://localhost:3000 <br/> 
 
 ## NextJS Basics
 NextJS is a very straightforward and very lightweight react framework, getting up to speed should be quick. It basically builds on top of plain react to give us some dope features that will save us a lot of time. <br/> <br/>
