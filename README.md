@@ -14,7 +14,7 @@ To view a locally hosted preview, go to http://localhost:3000 <br/>
 
 ## NextJS Basics
 NextJS is a very straightforward and very lightweight react framework, getting up to speed should be quick. It basically builds on top of plain react to give us some dope features that will save us a lot of time. <br/> <br/>
-For some useful and quick info check out: 
+Useful:
 [https://nextjs.org/docs/getting-started] this tutorial and surrounding pages encapsulates everything you need to know about Next 
 <li> NextJS page routing: https://nextjs.org/docs/routing/introduction
 <li> Build in CSS support, styled-jsx: https://nextjs.org/docs/basic-features/built-in-css-support
