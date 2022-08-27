@@ -1,4 +1,4 @@
-## WIP !
+## WIP !!
 
 ## Setup 
 Since the project is build with node, all usual node commands work. <br/> You can install and uninstall packages using `npm i <pkg>`, `npm uninstall <pkg>`, etc.. <br /> <br/>
