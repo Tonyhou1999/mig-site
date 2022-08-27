@@ -1,3 +1,5 @@
+## WIP !
+
 ## Setup 
 Since the project is build with node, all usual node commands work. <br/> You can install and uninstall packages using `npm i <pkg>`, `npm uninstall <pkg>`, etc.. <br /> <br/>
 To install the modules needed to run everything, just run `npm install` <br/>
@@ -58,9 +60,9 @@ Flow: Just make use of react and ES6 features to make things as modular and scal
 ## Conventions
 Code: Try to stick to google javascript conventions and docstrings, no worries if we don't completely, just a general rule of thumb. <br/> <br/>
 
-Features and PRs: Nothing crazy, to keep things simple lets do feature branches off `develop` like <br/> `john/<Jira ticket num eg. MS-1>/cool-new-feature`. Put up pull request back into `develop` so that we have another person glance at things and can be most efficient. Note: Jira is synced up with github, if you name your branches like this: `fabio/MS-#-your-branch-name` it will link the branch with the issue in jira and automatically keep track of shit like when its merged, what is being worked on, etc... Try to delete remote branches after done to keep it clean. This way, the organization is really easy, Jira will automatically transition issues once you merge the PR in. <br/><br/> For small things like tiny bugfixes and formatting just commit on `develop`, for large features that require complex integrations try to write unit tests where it makes sense, nothing crazy here. <br /> <br />
+Features and PRs: Nothing crazy, to keep things simple lets do feature branches off `develop` like <br/> `john/<Jira ticket num eg. MS-1>/cool-new-feature`. Put up pull request back into `develop` so that we have another person glance at things and can be most efficient. Note: Jira is synced up with github, if you name your branches like this: `fabio/MS-#-your-branch-name` it will link the branch with the issue in jira and automatically keep track of things like when its merged, what is being worked on, etc... Try to delete remote branches after done to keep it clean. This way, the organization is really easy, Jira will automatically transition issues once you merge the PR in. <br/><br/> For small things like tiny bugfixes and formatting just commit on `develop`, for large features that require complex integrations try to write unit tests where it makes sense, nothing crazy here. <br /> <br />
 
-Tasklist: just use this to keep track of shit we need to do, whats broken, and whats done. Nothing crazy. Link to active sprint = https://mig-site.atlassian.net/jira/software/c/projects/MS/boards/1
+Tasklist: just use this to keep track of we need to do, whats broken, and whats done. Nothing crazy. Link to active sprint = https://mig-site.atlassian.net/jira/software/c/projects/MS/boards/1
 <br/> Link to backlog: https://mig-site.atlassian.net/jira/software/c/projects/MS/boards/1/backlog?issueLimit=100
  All this stuff can be seen from left tab of links. <br/> ``TODO`` flush out feature list we need for 1.0 and rip her out. 
 ## Timeline
